@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "File",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "Promise.all([\n  scrib.loadScript(\"https://unpkg.com/react@18/umd/react.development.js\"),\n  scrib.loadScript(\"https://unpkg.com/react-dom@18/umd/react-dom.development.js\")\n]).then(() => {\n  const rootDiv = document.createElement(\"div\");\n  rootDiv.id = \"root\";\n  document.body.appendChild(rootDiv);\n  function App() {\n    return React.createElement(\"h1\", null, \"Hi from MindWeaver\");\n  }\n  const root = ReactDOM.createRoot(document.getElementById(\"root\"));\n  root.render(React.createElement(App));\n});\n",
+      "status": "[7]<br><span style=\"font-size:8px\">337ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>html\n<script src=\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\"></script>\n\n<!-- React Three Fiber UMD bundle -->\n<script src=\"https://cdn.jsdelivr.net/npm/@react-three/fiber@8.12.4/dist/react-three-fiber.umd.js\"></script>\n\n<!-- D3-force-3d UMD bundle -->\n<script src=\"https://cdn.jsdelivr.net/npm/d3-force-3d@1.1.1/build/d3-force-3d.min.js\"></script>",
+      "status": "[1]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "\n<script src=\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\"></script>\n\n<!-- React Three Fiber UMD bundle -->\n<script src=\"https://cdn.jsdelivr.net/npm/@react-three/fiber@8.12.4/dist/react-three-fiber.umd.js\"></script>\n\n<!-- D3-force-3d UMD bundle -->\n<script src=\"https://cdn.jsdelivr.net/npm/d3-force-3d@1.1.1/build/d3-force-3d.min.js\"></script> <br>",
+      "type": "code"
+    },
+    {
+      "code": "scrib.loadScript(\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\");",
+      "status": "[2]<br><span style=\"font-size:8px\">181ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}
