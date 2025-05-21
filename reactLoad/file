@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "name": "File",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "Promise.all([\n  scrib.loadScript(\"https://unpkg.com/react@18/umd/react.development.js\"),\n  scrib.loadScript(\"https://unpkg.com/react-dom@18/umd/react-dom.development.js\")\n]).then(() => {\n  const rootDiv = document.createElement(\"div\");\n  rootDiv.id = \"root\";\n  document.body.appendChild(rootDiv);\n  function App() {\n    return React.createElement(\"h1\", null, \"Hi from MindWeaver\");\n  }\n  const root = ReactDOM.createRoot(document.getElementById(\"root\"));\n  root.render(React.createElement(App));\n});\n",
+      "status": "[7]<br><span style=\"font-size:8px\">337ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}
