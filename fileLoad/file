@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "name": "New JSNB",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "await scrib.loadScript(\"https://unpkg.com/react@18/umd/react.development.js\");\nawait scrib.loadScript(\"https://unpkg.com/react-dom@18/umd/react-dom.development.js\");\nconst { useState } = React;\n\nlet container = document.getElementById(\"react-root\");\n\nif (!container) {\n  container = document.createElement(\"div\");\n  container.id = \"react-root\";\n  document.body.appendChild(container);\n} else {\n  container.innerHTML = \"\";\n}\nfunction App() {\n  const [query, setQuery] = useState('');\n  return React.createElement(\n  \"div\",\n  { className: \"interface\" },\n  React.createElement(\"textarea\", {\n    id: \"inputText\",\n    placeholder: \"Enter your query here...\",\n    value: query,\n    onChange: (e) => setQuery(e.target.value)\n  }),\n  React.createElement(\n    \"button\",\n    { id: \"analyzeBtn\" },\n    \"Analyze\"\n  )\n);\n\n}\n\nReactDOM.createRoot(container).render(React.createElement(App));\n",
+      "status": "[36]<br><span style=\"font-size:8px\">441ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>css\nbody {\n  margin: 0;\n  background: #0b0f12;\n  color: #0ff;\n  font-family: 'Courier New', monospace;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.interface {\n  width: 600px;\n  padding: 20px;\n  background: rgba(0, 0, 0, 0.7);\n  border: 2px solid #0ff;\n  border-radius: 10px;\n  box-shadow: 0 0 20px #0ff4;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  /* Ensure contents stretch full width */\n  align-items: stretch;\n}\n\ntextarea {\n  width: 100%;\n  height: 120px;\n  font-size: 16%;\n  color: #0ff;\n  background: rgba(0, 0, 0, 0.8);\n  border: 2px solid #0ff;\n  border-radius: 8px;\n  resize: none;\n  box-shadow: inset 0 0 10px #0ff4;\n  /* Make sure it fills container width */\n  box-sizing: border-box;\n}\n\nbutton {\n  background: #0ff2;\n  border: none;\n  color: #000;\n  padding: 10px 15px;\n  font-weight: bold;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.3s ease;\n  width: 25%;\n  align-self: center;\n}\n\nbutton:hover {\n  background: #0ff;\n}",
+      "status": "[40]<br><span style=\"font-size:8px\">7ms<span></span></span>",
+      "output": "<style>\nbody {\n  margin: 0;\n  background: #0b0f12;\n  color: #0ff;\n  font-family: 'Courier New', monospace;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.interface {\n  width: 600px;\n  padding: 20px;\n  background: rgba(0, 0, 0, 0.7);\n  border: 2px solid #0ff;\n  border-radius: 10px;\n  box-shadow: 0 0 20px #0ff4;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  /* Ensure contents stretch full width */\n  align-items: stretch;\n}\n\ntextarea {\n  width: 100%;\n  height: 120px;\n  font-size: 16%;\n  color: #0ff;\n  background: rgba(0, 0, 0, 0.8);\n  border: 2px solid #0ff;\n  border-radius: 8px;\n  resize: none;\n  box-shadow: inset 0 0 10px #0ff4;\n  /* Make sure it fills container width */\n  box-sizing: border-box;\n}\n\nbutton {\n  background: #0ff2;\n  border: none;\n  color: #000;\n  padding: 10px 15px;\n  font-weight: bold;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background 0.3s ease;\n  width: 25%;\n  align-self: center;\n}\n\nbutton:hover {\n  background: #0ff;\n}</style> <br>",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}
