@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Terminal Interface</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0f12;
+      color: #0ff;
+      font-family: 'Courier New', monospace;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .interface {
+      width: 600px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #0ff4;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /* Ensure contents stretch full width */
+      align-items: stretch;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 15px;
+      font-size: 16px;
+      color: #0ff;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #0ff;
+      border-radius: 8px;
+      resize: none;
+      box-shadow: inset 0 0 10px #0ff4;
+      /* Make sure it fills container width */
+      box-sizing: border-box;
+    }
+
+    .response {
+      font-size: 18px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff5;
+      margin-top: 10px;
+      border-top: 1px solid #0ff3;
+      padding-top: 10px;
+      min-height: 80px;
+    }
+
+    button {
+      background: #0ff2;
+      border: none;
+      color: #000;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100px;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background: #0ff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="interface">
+  <textarea id="inputText" placeholder="Enter your query here..."></textarea>
+  <button id="analyzeBtn">Analyze</button>
+  <div class="response" id="responseText"></div>
+</div>
+
+</body>
+</html>
