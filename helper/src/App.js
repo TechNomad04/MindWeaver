@@ -12,14 +12,24 @@ function App(){
 
     setTimeout(()=>{
       setIsAnalysis(false);
-      setAnalysisResult("mock analysis with ${query}");
+      setAnalysisResult(`mock analysis with ${query}`);
     },3000);
   }
 
   return (
     <div class="interface">
-      <textarea id="inputText" placeholder="Enter your query here..." value={query} onChange={(e)=>setQuery(e.target.value)}></textarea>
-      <button id="analyzeBtn" onClick={handleAnalysis}>Analyze</button>
+      <textarea id="inputText" placeholder="Enter your query here..." value={query} onChange={(e)=>setQuery(e.target.value)} disabled={isAnalyzing}></textarea>
+      <button className={`analyze-button ${isAnalyzing ? 'disabled' : ''}`} id="analyzeBtn" onClick={handleAnalysis}>{isAnalyzing?"Analyzing":"Analyze"}</button>
+      {isAnalyzing && (
+        <div className='dna-spinner'>
+
+        </div>
+      )}
+      {analysisResult && (
+        <div className='analysis-result fade-in'>
+          {analysisResult}
+        </div>
+      )}
   </div>
   );
 }
