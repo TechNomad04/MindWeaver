@@ -73,3 +73,46 @@ button:hover {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.dna-spinner {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin-top: 20px;
+  height: 80px;
+  pointer-events: none;
+}
+
+.dna-spinner.active {
+  opacity: 1;
+}
+
+.glowing-textarea.analyzing {
+  animation: neuralPulse 1.5s infinite;
+  box-shadow: 0 0 10px #0ff, 0 0 30px #0ff;
+}
+
+@keyframes neuralPulse {
+  0% { box-shadow: 0 0 10px #0ff, 0 0 30px #0ff; }
+  50% { box-shadow: 0 0 20px #0ff, 0 0 50px #0ff; }
+  100% { box-shadow: 0 0 10px #0ff, 0 0 30px #0ff; }
+}
+
+.dna {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 80px;
+}
+
+.strand {
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(#0ff, transparent, #0ff);
+  animation: spinStrand 1s linear infinite;
+}
+
+@keyframes spinStrand {
+  0% { transform: scaleY(1) rotate(0deg); }
+  50% { transform: scaleY(1.2) rotate(180deg); }
+  100% { transform: scaleY(1) rotate(360deg); }
+}

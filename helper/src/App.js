@@ -18,13 +18,17 @@ function App(){
 
   return (
     <div class="interface">
-      <textarea id="inputText" placeholder="Enter your query here..." value={query} onChange={(e)=>setQuery(e.target.value)} disabled={isAnalyzing}></textarea>
+      <textarea className={`glowing-textarea ${isAnalyzing ? 'analyzing' : ''}`} id="inputText" placeholder="Enter your query here..." value={query} onChange={(e)=>setQuery(e.target.value)} disabled={isAnalyzing}></textarea>
       <button className={`analyze-button ${isAnalyzing ? 'disabled' : ''}`} id="analyzeBtn" onClick={handleAnalysis}>{isAnalyzing?"Analyzing":"Analyze"}</button>
       {isAnalyzing && (
-        <div className='dna-spinner'>
-
+        <div className="dna-spinner active">
+          <div class="dna">
+            <div class="strand"></div>
+            <div class="strand"></div>
+          </div>
         </div>
       )}
+
       {analysisResult && (
         <div className='analysis-result fade-in'>
           {analysisResult}
